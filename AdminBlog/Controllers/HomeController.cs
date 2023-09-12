@@ -79,8 +79,10 @@ namespace AdminBlog.Controllers
                 _context.Update(author);
             }
             await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Author));
         }
+
 
         public async Task<IActionResult> AuthorDetails(int Id)
         {
@@ -95,6 +97,8 @@ namespace AdminBlog.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Author));
         }
+
+        
 
         public IActionResult LogOut()
         {
